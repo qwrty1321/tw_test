@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/auth/twitter', 'OAuthLoginController@getAuth');
+Route::get('/oauth/callback/twitter/', 'OAuthLoginController@authCallback');
