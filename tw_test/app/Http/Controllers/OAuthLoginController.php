@@ -27,7 +27,7 @@ class OAuthLoginController extends Controller
         // ユーザ属性を取得
         $user = Socialite::driver($social)->user();
 
-        // デバッグ（デモンストレーション用）
         echo'<pre>'; print_r($user); echo'<pre>'; exit;
+        return  view('photoview',compact('user'));
     }
 }

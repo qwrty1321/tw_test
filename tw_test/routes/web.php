@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+
 Route::get('/auth/twitter', 'OAuthLoginController@getAuth');
-Route::get('/oauth/callback/twitter/', 'OAuthLoginController@authCallback');
+Route::get('/oauth/callback/twitter', 'OAuthLoginController@authCallback');
